@@ -1,21 +1,102 @@
-/* styles.css */
-
-/* Global variables */
 
 :root {
-    
+  --black: rgba(27, 27, 27, 1);
+  --cream: rgba(243, 240, 233, 1);
+  --blue: rgba(27, 72, 145, 1);
+  --yellow: rgba(245, 178, 1, 1);
+  --red: rgba(239, 49, 25, 1);
 }
 
-/* Main styles */
-
+html{ 
+    scroll-behavior: smooth;
+}
 body {
-
+    background-color: var(--cream);
+    margin: 7px;
 }
 
-h1 {
+.navbar {
+    background-color: var(--cream);
+    margin-bottom: .5em;
+    padding: 1em 2em;
+    border-radius: 10px;
+    position: sticky;
+    top:0;
+    z-index: 1000;
+    overflow: hidden;
 
+    display: flex;
+    justify-content: space-between;
+
+    font-family: "organda-mn", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+    /* Nav list */
+    ul{
+        background-color: var(--dark-purple);
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    /* Nav links */
+    a {
+        text-align: center;
+        padding: 15px;
+        text-decoration: none;
+
+        color: var(--red);
+        font-size: 1.5em;
+    }
+
+   /* Nav items */
+    li {
+        padding: 0 1em;
+        float: left;
+    }
+
+    .left {
+        display: flex;
+        flex: 1;
+        gap: 2em;
+        justify-content: flex-start;
+    }
+    .right {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: auto;
+        a{
+        color: var(--blue);
+        }
+    }
+}
+main{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  position: relative;
+  margin: 3em;
 }
 
-p {
+#landing {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #title {
+  font-family: "organda-mn", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 90pt;
+}
+
+#description {
+  font-family: "marine", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 23pt;
+}
 
 }
