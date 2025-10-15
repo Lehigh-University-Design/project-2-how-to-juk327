@@ -145,7 +145,7 @@ input:checked + .slider:before {
 
 main {
   display: flex;
-  flex-direction: column; /* 👈 stack sections vertically */
+  flex-direction: column; 
   gap: 20px;
   position: relative;
   margin-left: 6em;
@@ -154,7 +154,7 @@ main {
 
 .sections {
   display: flex;
-  flex-direction: column; /* 👈 vertical stacking */
+  flex-direction: column;
   gap: 4em;
   width: 100%;
 }
@@ -164,16 +164,16 @@ main {
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 1em;
-    margin-top: 5em;
+    margin-top: 4em;
     margin-bottom: 1em;
     align-self: auto;
 }
 
 #landing > img {
-    max-width: 600px;
+    max-width: 580px;
     height: auto;
     margin-right: 5em;    
-    margin-top: 4em;
+    margin-top: 4.5em;
 }
 
  #title {    
@@ -182,44 +182,43 @@ main {
     font-style: normal;
     font-size: 95pt;
 
-    margin: 0; /* remove default margin */
-    line-height: 1; /* tighten vertical spacing */
+    margin: 0; 
+    line-height: 1; 
     }
 
  #description {
     font-family: "marine", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 23pt;
+    font-size: 22pt;
 
-    margin-top: 0.7em; /* small gap below title */
-    margin-bottom: 0; /* optional */
-    line-height: 1.5;
+    margin-top: 0.8em; 
+    margin-bottom: 0;
+    line-height: 1.6;
     }
 
 .cookinfo {
-    display: flex;           /* icon + text in one row */
-    align-items: center;     /* vertically align icon and text */
-    gap: 1.25em;             /* space between icon and text */
+    display: flex;         
+    align-items: center;    
+    gap: 1.25em;            
    font-family: "marine", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 20pt;
+    font-size: 18pt;
     color: var(--red);
-    margin-top: 1.75em;
+    margin-top: 1.5em;
     
     img {
         width: 60px;          
         height: 60px;
-        object-fit: contain;/* spacing between rows */
-        margin: 0;          /* remove default margin */
+        object-fit: contain;
+        margin: 0;       
     }
 
     .cooktime {
         display: flex;
-        gap: 1.25em;              /* space between Prep / Cook / Total */
+        gap: 1.2em; 
         font-family: "marine", sans-serif;
-        font-size: 20pt;
         line-height: 1.2;
         color: var(--red);
     }
@@ -232,7 +231,7 @@ main {
     gap: 1em;
     align-items: start;
     margin-bottom: 1em;
-    margin-top: 7em;
+    padding-top: 9em;
  
     h1 {
         font-family: "organda-mn", sans-serif;
@@ -250,25 +249,40 @@ main {
         font-size: 20pt;
         line-height: 1.3;
         margin-top: 0.3em;
+        padding-left: 1.5em; 
+    }
 
+    li {
+        align-items: center
+    };
 
-        li::marker {
-        color: var(--yellow); /* or any color you want */
-        font-size: 1.75em;  /* optional: make bullets larger */
+    li::marker {
+        color: var(--yellow);
+        font-size: 1.5em; 
         }
 
+    .list-indent {
+            padding-left: 2em;
+            list-style-type: disc;
+            font-size: 18pt;
+            
+            li::marker {
+            color: var(--yellow);
+            font-size: 1.25em;
+            }
     }
+   
 }
 
-
+/* ingredient section */
 #ingredients h1 {
         font-family: "organda-mn", sans-serif;
         font-weight: 700;
         font-style: normal;
         font-size: 90pt;
         color: var(--red);
-        margin: 0; /* remove default margin */
-        margin-top: .5em;
+        margin: 0; 
+        margin-top: .75em;
     }
 
 .ingredientlist {
@@ -277,7 +291,7 @@ main {
     gap: 9em;
     align-items: start;
     margin-bottom: 1em;
-    margin-top: 1em;
+    margin-top: 1.2em;
     color: var(black);
 
     ul {
@@ -291,19 +305,20 @@ main {
         color: var(--black);
         transition: color 0.2s;
         }
-    }
+
+}
 
 li::marker {
-    color: var(--yellow); /* or any color you want */
-    font-size: 1.75em;  /* optional: make bullets larger */
+    color: var(--yellow); 
+    font-size: 1.5em; 
 }
  .ingredientlist a:hover {
-        color: var(--red); /* highlight when hovering */
+        color: var(--red);
  }
 
 .ingredientlist a {
     text-decoration: none;
-    color: var(--black); /* sets default link color */
+    color: var(--black); 
     transition: color 0.2s;
 }
 
@@ -311,7 +326,7 @@ li::marker {
 
 #recipe {
     margin-bottom: 5em;
-    margin-top: 8em;
+    margin-top: 6em;
  
     h1 {
         font-family: "organda-mn", sans-serif;
@@ -329,6 +344,7 @@ li::marker {
     position: relative;
     width: 100%;
     max-width: 400px; /* adjust as needed */
+    transition: opacity 0.3s ease;
 }
 
 .img-default {
@@ -343,6 +359,7 @@ li::marker {
     top: 0;
     left: 0;
     opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .step-images:hover .img-hover {
@@ -351,6 +368,35 @@ li::marker {
 
 .step-images:hover .img-default {
     opacity: 0; 
+}
+
+.step-content {
+    margin-right: 8em;
+    .step-number {
+        font-family: "peachy-keen-jf", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--red);
+    }
+
+    .step-text {
+        h2 {
+            font-family: "marine", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20pt;
+        }
+        p {
+            font-family: "marine", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 16pt;
+            margin-top: 0;
+            margin-bottom: 6em;
+            color: var(--blue);
+        }
+    }
+
 }
 
 
@@ -394,7 +440,7 @@ li::marker {
 }
 
 .ingredients-sticky li {
-    line-height: 0.75em;
+    line-height: 0.5em;
     margin-bottom: 0.5em;
     font-family: "marine", sans-serif;
     font-size: 14pt;
