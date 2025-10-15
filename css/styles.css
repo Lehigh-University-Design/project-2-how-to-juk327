@@ -18,7 +18,7 @@ body {
 .navbar {
     background-color: var(--cream);
     margin-bottom: .5em;
-    padding: 1em 2em;
+    padding: .75em 2em;
     border-radius: 10px;
     position: sticky;
     top:0;
@@ -31,12 +31,14 @@ body {
     font-family: "organda-mn", sans-serif;
     font-weight: 700;
     font-style: normal;
+    transition: box-shadow 0.3s ease; /* smooth shadow transition */
+
 
     /* Nav list */
     ul{
-        background-color: var(--dark-purple);
         padding: 0;
         margin: 0;
+        align-items: center;
         list-style: none;
     }
     /* Nav links */
@@ -46,7 +48,7 @@ body {
         text-decoration: none;
 
         color: var(--red);
-        font-size: 1.5em;
+        font-size: 2.25em;
     }
 
    /* Nav items */
@@ -67,36 +69,348 @@ body {
         margin-left: auto;
         a{
         color: var(--blue);
+        font-size: 1.75em;
         }
     }
 }
-main{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
 
-  position: relative;
-  margin: 3em;
+.navbar.scrolled {
+  box-shadow: 0 4px 12px rgba(35, 35, 35, 0.15); /* subtle shadow */
 }
+
+/* CookModeToggle Switch */
+.cookmode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--blue);
+    font-size: 1.75em;
+    font-family: "organda-mn", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Toggle switch styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--red);
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+/* End Toggle Switch */
+
+/* Logo animation 
+#logo {
+    transition: transform 0.2s ease;
+}
+*/
+
+main {
+  display: flex;
+  flex-direction: column; /* 👈 stack sections vertically */
+  gap: 20px;
+  position: relative;
+  margin-left: 6em;
+  margin-right: 6em;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column; /* 👈 vertical stacking */
+  gap: 4em;
+  width: 100%;
+}
+
 
 #landing {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  #title {
-  font-family: "organda-mn", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 90pt;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1em;
+    margin-top: 5em;
+    margin-bottom: 1em;
+    align-self: auto;
 }
 
-#description {
-  font-family: "marine", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 23pt;
+#landing > img {
+    max-width: 600px;
+    height: auto;
+    margin-right: 5em;    
+    margin-top: 4em;
 }
 
+ #title {    
+    font-family: "organda-mn", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 95pt;
+
+    margin: 0; /* remove default margin */
+    line-height: 1; /* tighten vertical spacing */
+    }
+
+ #description {
+    font-family: "marine", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 23pt;
+
+    margin-top: 0.7em; /* small gap below title */
+    margin-bottom: 0; /* optional */
+    line-height: 1.5;
+    }
+
+.cookinfo {
+    display: flex;           /* icon + text in one row */
+    align-items: center;     /* vertically align icon and text */
+    gap: 1.25em;             /* space between icon and text */
+   font-family: "marine", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20pt;
+    color: var(--red);
+    margin-top: 1.75em;
+    
+    img {
+        width: 60px;          
+        height: 60px;
+        object-fit: contain;/* spacing between rows */
+        margin: 0;          /* remove default margin */
+    }
+
+    .cooktime {
+        display: flex;
+        gap: 1.25em;              /* space between Prep / Cook / Total */
+        font-family: "marine", sans-serif;
+        font-size: 20pt;
+        line-height: 1.2;
+        color: var(--red);
+    }
+
+}
+
+#tips {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1em;
+    align-items: start;
+    margin-bottom: 1em;
+    margin-top: 7em;
+ 
+    h1 {
+        font-family: "organda-mn", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 90pt;
+        color: var(--red);
+        margin: 0; /* remove default margin */
+    }
+
+    ul {
+        font-family: "marine", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20pt;
+        line-height: 1.3;
+        margin-top: 0.3em;
+
+
+        li::marker {
+        color: var(--yellow); /* or any color you want */
+        font-size: 1.75em;  /* optional: make bullets larger */
+        }
+
+    }
+}
+
+
+#ingredients h1 {
+        font-family: "organda-mn", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 90pt;
+        color: var(--red);
+        margin: 0; /* remove default margin */
+        margin-top: .5em;
+    }
+
+.ingredientlist {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 9em;
+    align-items: start;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    color: var(black);
+
+    ul {
+        font-family: "marine", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 22pt;
+        line-height: 1.3;
+        margin-top: 0.3em;
+        text-decoration: none;
+        color: var(--black);
+        transition: color 0.2s;
+        }
+    }
+
+li::marker {
+    color: var(--yellow); /* or any color you want */
+    font-size: 1.75em;  /* optional: make bullets larger */
+}
+ .ingredientlist a:hover {
+        color: var(--red); /* highlight when hovering */
+ }
+
+.ingredientlist a {
+    text-decoration: none;
+    color: var(--black); /* sets default link color */
+    transition: color 0.2s;
+}
+
+/* Recipe Steps Section */
+
+#recipe {
+    margin-bottom: 5em;
+    margin-top: 8em;
+ 
+    h1 {
+        font-family: "organda-mn", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 90pt;
+        color: var(--red);
+        margin: 0;
+        margin-bottom: 0.25em;
+    }
+}
+
+
+.step-images {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* adjust as needed */
+}
+
+.img-default {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.img-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.step-images:hover .img-hover {
+    opacity: 1;   
+}
+
+.step-images:hover .img-default {
+    opacity: 0; 
+}
+
+
+/*sticky*/
+
+.recipecontainer {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3.25em;
+    align-items: flex-start;
+}
+
+.ingredients-sticky {
+    position: sticky;
+    top: 120px;
+    background-color: var(--blue);
+    color: var(--cream);
+    padding: 1.5em;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(35, 35, 35, 0.15);
+    width: 100%;
+    align-self: flex-start;
+   
+
+    h2 {
+        font-family: "organda-mn", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 30pt;
+        color: var(--yellow);
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+    }
+}
+
+/* Checklist styling */
+.ingredients-sticky ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.ingredients-sticky li {
+    line-height: 0.75em;
+    margin-bottom: 0.5em;
+    font-family: "marine", sans-serif;
+    font-size: 14pt;
+}
+
+.ingredients-sticky input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5em;
+    accent-color: var(--red);
+    cursor: pointer;
+}
+
+.ingredients-sticky label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How to make Vodka Pasta</title>
+        <link rel="icon" type="image/png" href="assets/drawing/farfalle-logo.png">
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/heg3zeq.css">
@@ -11,27 +12,229 @@
 <body>
    
    <nav class="navbar">
-    <ul>
-      <li><a href="#landing">icon</a></li>
+    <ul class="left">
+      <li><a href="#landing"><img src="assets/drawing/farfalle-logo.png" width="90" id="logo"></a></li>
       <li><a href="#tips">Tips</a></li>
       <li><a href="#ingredients">Ingredients</a></li>
       <li><a href="#recipe">Recipe</a></li>
     </ul>
 
-     <ul class="nav-right">
-         <li><a href="cookmode">Cook Mode</a></li>
+     <ul class="right">
+        <li>
+        <div class="cookmode-toggle">
+            <span>Cook Mode</span>
+            <label class="switch">
+                <input type="checkbox" id="cookmodecheckbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </li>
     </ul>
   </nav>
 
 <main>
-    <div id="landing">
-        <div>
-            <h2 id="title">Vodka Pasta</h2>
-            <p id="description">Penne alla Vodka, also known as Vodka Pasta is a creamy tomato based pasta that is yummy and easy to make. It takes less than an hour and makes for a quick lunch or dinner.</p>
+    <div class="sections">
+        <div id="landing">
+            <img src="assets/drawing/vodkapasta.png" alt="Pasta Bowl Image"> 
+            <div>
+                <h2 id="title">Vodka Pasta</h2>
+                <p id="description">Penne alla Vodka, also known as Vodka Pasta is a creamy tomato based pasta that is yummy and easy to make. It takes less than an hour and makes for a quick lunch or dinner.</p>
+
+                <div class="cookinfo">
+                    <img src="assets/drawing/cooktime.png" width="60" alt="Clock">
+                    <div class="cooktime">
+                        <span>Prep: 10 mins</span>
+                        <span>Cook: 25 mins</span>
+                        <span>Total: 35 mins</span>
+                    </div>
+                </div>
+
+                <div class="cookinfo">
+                    <img src="assets/drawing/servingsize.png" width="60" alt="Prep Time">
+                    <span>Serves 2-3</span>
+                </div>
+
+            </div>
         </div>
+
+        <div id="tips">
+            <h1>Tips!</h1>
+            <ul>
+                <li>If your pasta isn’t ready when sauce is done being made, turn off heat for the sauce.</li>
+                <li>Use a big pot or pan (when starting) for the sauce so you can stir in the pasta.</li>
+                <li>Pasta water is important! The starch in pasta water emulsifies with the sauce’s fat, naturally thickening it and making it stick to the pasta.</li>
+                <li>You can use low fat cream, it just won’t have the creamy pasta feel.</li>
+                <li>Best Pasta to use: Rigatoni or Penne</li>
+                <li>Customize it to your liking and add in shrimp, chicken, or whatever you like instead of Pork Belly (what I’m using)</li>
+            </ul>
+        </div>
+
+        <div id="ingredients">
+            <h1>Ingredients!</h1>
+            <div class="ingredientlist">
+
+                <ul class="ingredientlist1">
+                    <li><a href="https://www.walmart.com/search?q=pasta" target="_blank">Pasta</a></li>
+                    <li><a href="https://www.walmart.com/ip/Bertolli-Extra-Virgin-Olive-Oil-Rich-Taste-16-9-fl-oz/10292273?wl13=3563&selectedSellerId=0&wmlspartner=wlpa" target="_blank">Olive oil</a></li>
+                    <li><a href="https://www.walmart.com/ip/Minced-Garlic-8-oz-Jar/10320871?classType=REGULAR&from=/search" target="_blank">Minced Garlic</a></li>
+                    <li><a href="https://www.target.com/p/yellow-onion-each/-/A-13474244?sid=1510S&afid=google&TCID=OGS&CPNG=Produce+Floral&adgroup=211-17" target="_blank">Minced Onion</a></li>
+                    <li><a href="https://www.walmart.com/ip/Great-Value-Tomato-Paste-12-oz/10415527?wl13=2145&selectedSellerId=0&wmlspartner=wlpa" target="_blank">2/3 Cup of Tomato Paste</a></li>
+                    <li>Choice of Protein (if wanted)</li>
+                    <li><a href="https://www.sayweee.com/en/product/CJ-Foods-Gochujang-Hot-Pepper-Paste-Very-Hot/27711?region_id=000007&mt=8" target="_blank">2 Tbsp Hot Pepper Paste/Korean Gochujang</a></li>
+                    <li><a href="https://www.walmart.com/ip/Great-Value-Heavy-Whipping-Cream-16-Fl-Oz/10450339?wl13=3563&selectedSellerId=0&wmlspartner=wlpa" target="_blank">1 1/2 Cup of Heavy Cream</a></li>
+                </ul>
+
+                <ul class="ingredientlist2">
+                    <li><a href="https://www.walmart.com/ip/Great-Value-Kosher-Basil-Leaves-0-8-oz/330313658?classType=REGULAR&athbdg=L1300&from=/search" target="_blank">Dried Basil Seasoning</a></li>
+                    <li><a href="https://www.walmart.com/ip/Great-Value-Crushed-Red-Pepper-1-75-oz/217612954?classType=VARIANT&athbdg=L1200&from=/search" target="_blank">Red Pepper Flakes</a></li>
+                    <li><a href="https://www.walmart.com/ip/Great-Value-Italian-Seasoning-0-95-oz/637648335?classType=REGULAR&athbdg=L1300&from=/search" target="_blank">Italian Seasoning</a></li>
+                    <li><a href="https://www.walmart.com/ip/McCormick-Non-GMO-Black-Pepper-Grinder-1-oz-Bottle/44883263?classType=VARIANT&from=/search" target="_blank">Black Pepper</a></li>
+                    <li>Salt to taste</li>
+                    <li><a href="https://www.walmart.com/ip/Frigo-Shredded-Parmesan-Cheese-5-oz-Refrigerated-Plastic-Cup/10307238?classType=REGULAR&athbdg=L1600&from=/search" target="_blank">1 Cup Parmesan</a></li>
+                    <li><a href="https://www.walmart.com/ip/Great-Value-Sweet-Cream-Unsalted-Butter-16-oz-Box-4-Sticks-Refrigerated/26954459?classType=REGULAR&athbdg=L1600&from=/search" target="_blank">2 Tbsp Unsalted Butter</a></li>
+                    <li>1/4 Cup of Pasta Water</li>
+                </ul>
+
+            </div>
+        </div>
+
+         <div id="recipe">
+            <h1>Recipe!</h1>
+            <div class="recipecontainer">
+
+                <div class="steps">
+                <div class="recipe-step">
+                    <div class="step-images">
+                    <img src="assets/drawing/step1.png" width="400" alt="Step 1" class="img-default">
+                    <img src="assets/photos/step1real.jpeg" width="350" alt="Step 1 Real" class="img-hover">
+                    </div>
+                    <div class="step-content">
+                        <div class="step-number">1.</div>
+                        <div class="step-text"> <h2>Boil your pasta in a large pot of salted water</h2> <p>*SAVE a 1/4 cup of pasta water before draining</p></div>
+                    </div>
+                </div>
+                
+                <div class="recipe-step">
+                    <div class="step-images">
+                    <img src="assets/drawing/step2.png" width="400" alt="Step 2"  class="img-default">
+                    <img src="assets/photos/step2real.jpeg" width="350" alt="Step 2 Real" class="img-hover">
+                    </div>
+                    <div class="step-content">
+                        <div class="step-number">2.</div>
+                        <div class="step-text"> <h2>In a LARGE pan, put olive oil and sauté the garlic, onion and protein of choice (if you want)</h2> <p>*I'm using pork belly</p></div>
+                    </div>
+                </div>
+
+                 <div class="recipe-step">
+                    <div class="step-images">
+                    <img src="assets/drawing/step3.png" width="400" alt="Step 3"  class="img-default">
+                    <img src="assets/photos/step3real.jpeg" width="350" alt="Step 3 Real" class="img-hover">
+                    </div>
+                    <div class="step-content">
+                        <div class="step-number">3.</div>
+                        <div class="step-text"> <h2>In the same pan, cook off tomato paste and mix in hot pepper paste</h2> <p>*I’m using Korean gochujang</p></div>
+                    </div>
+                </div>
+
+                <div class="recipe-step">
+                    <div class="step-images">
+                    <img src="assets/drawing/step4.png" width="440" alt="Step 4" class="img-default">
+                    <img src="assets/photos/step4real.jpeg" width="350" alt="Step 4 Real" class="img-hover">
+                    </div>
+                    <div class="step-content">
+                        <div class="step-number">4.</div>
+                        <div class="step-text"> <h2>Mix in the heavy cream</h2></div>
+                    </div>
+                </div>
+
+                <div class="recipe-step">
+                    <div class="step-images">
+                    <img src="assets/drawing/step5.png" width="400" alt="Step 5" class="img-default">
+                    <img src="assets/photos/step5real.jpeg" width="350" alt="Step 5 Real" class="img-hover">
+                    </div>
+                    <div class="step-content">
+                        <div class="step-number">5.</div>
+                        <div class="step-text"> <h2>Mix in seasonings and parmesan: basil, pepper flakes, italian seasoning, black pepper, and salt</h2><p>*Taste as you go</p></div>
+                    </div>
+                </div>
+
+                <div class="recipe-step">
+                    <div class="step-images">
+                    <img src="assets/drawing/step6.png" width="400" alt="Step 6" class="img-default">
+                    <img src="assets/photos/step6real.jpeg" width="350" alt="Step 6 Real" class="img-hover">
+                    </div>
+                    <div class="step-content">
+                        <div class="step-number">6.</div>
+                        <div class="step-text"> <h2>Add your pasta</h2></div>
+                    </div>
+                </div>
+
+                <div class="recipe-step">
+                    <div class="step-images">
+                    <img src="assets/drawing/step7.png" width="400" alt="Step 7" class="img-default">
+                    <img src="assets/photos/step7real.jpeg" width="350" alt="Step 7 Real" class="img-hover">
+                    </div>
+                    <div class="step-content">
+                        <div class="step-number">7.</div>
+                        <div class="step-text"> <h2>Mix in butter and pasta water</h2><p>*Keep an eye on consistency</p></div>
+                    </div>
+                </div>
+                </div>
+                
+
+                 <!-- Sticky Ingredients Sheet -->
+                <aside class="ingredients-sticky">
+                    <h2>Ingredient Sheet</h2>
+                    <ul>
+                        <li><label><input type="checkbox"> Pasta</label></li>
+                        <li><label><input type="checkbox"> 1/4 Cup of Pasta Water</label></li>
+                        <li><label><input type="checkbox"> Olive Oil</label></li>
+                        <li><label><input type="checkbox"> Minced Garlic</label></li>
+                        <li><label><input type="checkbox"> Minced Onion</label></li>
+                        <li><label><input type="checkbox"> 2/3 Cup of Tomato Paste</label></li>
+                        <li><label><input type="checkbox"> 2 Tbsp Hot Pepper Paste or Korean Gochujang</label></li>
+                        <li><label><input type="checkbox"> 1 1/2 Cup Heavy Cream</label></li>
+                        <li><label><input type="checkbox"> 3 Tsp Basil, Red Pepper Flakes, Italian Seasoning</label></li>
+                        <li><label><input type="checkbox"> 3 Tsp Red Pepper Flakes</label></li>
+                        <li><label><input type="checkbox"> 1 Tsp Italian Seasoning</label></li>
+                        <li><label><input type="checkbox"> 3/4 Tsp Black Pepper</label></li>
+                        <li><label><input type="checkbox"> Salt to taste</label></li>
+                        <li><label><input type="checkbox"> 1 Cup Parmesan</label></li>
+                        <li><label><input type="checkbox"> 2 Tbsp Unsalted Butter</label></li>
+                    </ul>
+                </aside>
+
+                
+
+            </div>
+        </div>
+
     </div>
 
 </main>
 
+<script>
+  const logo = document.getElementById("logo");
+
+  window.addEventListener("scroll", () => {
+    // Calculate rotation based on scrollY
+    let rotation = window.scrollY * 0.5; // adjust speed if needed
+    rotation = rotation % 360;           // keep rotation within 0-360 degrees
+    logo.style.transform = `rotate(${rotation}deg)`;
+  });
+</script>
+<script>
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 10) { // add shadow after scrolling 10px
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+</script>
+
 </body>
+
 </html>
