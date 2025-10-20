@@ -164,8 +164,8 @@ main {
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 1em;
-    margin-top: 4em;
-    margin-bottom: 1em;
+    margin-top: 3em;
+    margin-bottom: 2em;
     align-self: auto;
 }
 
@@ -173,7 +173,7 @@ main {
     max-width: 580px;
     height: auto;
     margin-right: 5em;    
-    margin-top: 4.5em;
+    margin-top: 4.75em;
 }
 
  #title {    
@@ -209,8 +209,8 @@ main {
     margin-top: 1.5em;
     
     img {
-        width: 60px;          
-        height: 60px;
+        width: 47px;          
+        height: 47px;
         object-fit: contain;
         margin: 0;       
     }
@@ -230,7 +230,7 @@ main {
     grid-template-columns: 1fr 3fr;
     gap: 1em;
     align-items: start;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     padding-top: 9em;
  
     h1 {
@@ -281,8 +281,8 @@ main {
         font-style: normal;
         font-size: 90pt;
         color: var(--red);
-        margin: 0; 
-        margin-top: .75em;
+        margin: 0;
+        padding-top: 1em;
     }
 
 .ingredientlist {
@@ -290,18 +290,16 @@ main {
     grid-template-columns: 2fr 2fr;
     gap: 9em;
     align-items: start;
-    margin-bottom: 1em;
+    margin-bottom: 0.75em;
     margin-top: 1.2em;
     color: var(black);
 
     ul {
         font-family: "marine", sans-serif;
-        font-weight: 400;
         font-style: normal;
         font-size: 22pt;
         line-height: 1.3;
-        margin-top: 0.3em;
-        text-decoration: none;
+        margin-top: 0em;
         color: var(--black);
         transition: color 0.2s;
         }
@@ -314,6 +312,8 @@ li::marker {
 }
  .ingredientlist a:hover {
         color: var(--red);
+        text-decoration: underline;
+        font-size: 24pt;
  }
 
 .ingredientlist a {
@@ -322,11 +322,13 @@ li::marker {
     transition: color 0.2s;
 }
 
+
+
 /* Recipe Steps Section */
 
 #recipe {
-    margin-bottom: 5em;
-    margin-top: 6em;
+    margin-bottom: 2em;
+    padding-top: 8em;
  
     h1 {
         font-family: "organda-mn", sans-serif;
@@ -349,7 +351,6 @@ li::marker {
 
 .img-default {
     display: block;
-    width: 100%;
     border-radius: 10px;
     transition: opacity 0.3s ease;
 }
@@ -370,15 +371,43 @@ li::marker {
     opacity: 0; 
 }
 
+/* makes image on the left hand side 
+.recipe-step{
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+    margin-bottom: 3em;
+}
+*/
+
 .step-content {
     margin-right: 8em;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5em;
+    flex: 1;
+
     .step-number {
         font-family: "peachy-keen-jf", sans-serif;
-        font-weight: 400;
         font-style: normal;
         color: var(--red);
-        font-size: 30pt
+        font-size: 36pt;
+        line-height: 1;
+        min-width: 1.5em; /* keeps alignment even if numbers grow */
+        margin-top: 0.7em; /* adjust to align vertically with text */
     }
+
+    #step-text {
+        h2 {
+            font-family: "marine", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20pt;
+            margin-bottom: 6em;
+            margin-top:1.6em;
+        }
+    }
+
 
     .step-text {
         h2 {
@@ -386,6 +415,8 @@ li::marker {
             font-weight: 400;
             font-style: normal;
             font-size: 20pt;
+            margin-top: 1.6em;
+            margin-bottom: 0.5em;
         }
         p {
             font-family: "marine", sans-serif;
@@ -393,7 +424,7 @@ li::marker {
             font-style: italic;
             font-size: 16pt;
             margin-top: 0;
-            margin-bottom: 6em;
+            margin-bottom: 6.5em;
             color: var(--blue);
         }
     }
@@ -441,10 +472,12 @@ li::marker {
 }
 
 .ingredients-sticky li {
-    line-height: 0.5em;
-    margin-bottom: 0.5em;
+    display: flex;
+    align-items: flex-start;
+    line-height: 0.1em;
+    margin-bottom: 0.3em;
     font-family: "marine", sans-serif;
-    font-size: 14pt;
+    font-size: 13pt;
 }
 
 .ingredients-sticky input[type="checkbox"] {
@@ -453,6 +486,7 @@ li::marker {
     margin-right: 0.5em;
     accent-color: var(--red);
     cursor: pointer;
+    flex-shrink: 0;  
 }
 
 .ingredients-sticky label {
@@ -460,4 +494,58 @@ li::marker {
     align-items: center;
     cursor: pointer;
     user-select: none;
+}
+
+.ingredients-sticky li label {
+    display: flex;          /* keeps checkbox and text side by side */
+    gap: 0.5em;  
+
+    span {
+        display: inline-block;
+        line-height: 1.2em; /* spacing between wrapped lines */
+    }
+}
+
+
+#final {
+    margin-bottom: 5em;
+    padding-top: 0;
+ 
+    h1 {
+        font-family: "organda-mn", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 80pt;
+        color: var(--red);
+        margin: 0;
+        margin-bottom: 0.25em;
+    }
+
+    .final-click {
+    display: none; /* hide the real image initially */
+    cursor: url('../assets/drawing/fork.png'), auto;
+    }
+    .final-default {
+    cursor: pointer;
+    }
+
+    .final-images {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8em;
+        margin-top: 3em;
+        
+        img:hover {
+        cursor: url('../assets/drawing/fork.png'), auto;
+        }
+    }
+
+    #cursor {
+    position: fixed;
+    width: 80px;  /* your desired size */
+    height: 80px;
+    pointer-events: none;
+    background: url('../assets/drawing/fork.png') no-repeat center/contain;
+    z-index: 9999;
+}
 }
