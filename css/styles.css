@@ -48,7 +48,7 @@ body {
         text-decoration: none;
 
         color: var(--red);
-        font-size: 2.25em;
+        font-size: 2.15em;
     }
 
    /* Nav items */
@@ -69,7 +69,7 @@ body {
         margin-left: auto;
         a{
         color: var(--blue);
-        font-size: 1.75em;
+        font-size: 1.5em;
         }
     }
 }
@@ -193,7 +193,7 @@ main {
     font-size: 22pt;
 
     margin-top: 0.8em; 
-    margin-bottom: 0;
+    margin-bottom: 1.5em;
     line-height: 1.6;
     }
 
@@ -201,12 +201,12 @@ main {
     display: flex;         
     align-items: center;    
     gap: 1.25em;            
-   font-family: "marine", sans-serif;
+    font-family: "marine", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 18pt;
     color: var(--red);
-    margin-top: 1.5em;
+    margin-top: 0.75em;
     
     img {
         width: 47px;          
@@ -222,7 +222,6 @@ main {
         line-height: 1.2;
         color: var(--red);
     }
-
 }
 
 #tips {
@@ -403,8 +402,8 @@ li::marker {
             font-weight: 400;
             font-style: normal;
             font-size: 20pt;
-            margin-bottom: 6em;
-            margin-top:1.6em;
+            margin-bottom: 5em;
+            margin-top:1.4em;
         }
     }
 
@@ -415,7 +414,7 @@ li::marker {
             font-weight: 400;
             font-style: normal;
             font-size: 20pt;
-            margin-top: 1.6em;
+            margin-top: 1.4em;
             margin-bottom: 0.5em;
         }
         p {
@@ -424,7 +423,7 @@ li::marker {
             font-style: italic;
             font-size: 16pt;
             margin-top: 0;
-            margin-bottom: 6.5em;
+            margin-bottom: 5.5em;
             color: var(--blue);
         }
     }
@@ -508,7 +507,7 @@ li::marker {
 
 
 #final {
-    margin-bottom: 5em;
+    margin-bottom: 3em;
     padding-top: 0;
  
     h1 {
@@ -536,7 +535,7 @@ li::marker {
         margin-top: 3em;
         
         img:hover {
-        cursor: url('../assets/drawing/fork.png'), auto;
+        cursor: url('../assets/drawing/fork2.png'), auto;
         }
     }
 
@@ -548,4 +547,22 @@ li::marker {
     background: url('../assets/drawing/fork.png') no-repeat center/contain;
     z-index: 9999;
 }
+}
+
+footer p{
+    text-align: center;
+    font-family: "organda-mn", sans-serif;
+    font-style: normal;
+    font-size: 2.1em;   
+    font-weight: 700;
+
+    color: var(--blue);
+}
+
+footer a img {
+    display: block;
+    margin: 0 auto; /* centers the image */
+    width: 80px;
+    height: auto;
+    margin-bottom: 4em;
 }
