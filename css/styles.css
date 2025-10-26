@@ -46,10 +46,18 @@ body {
         text-align: center;
         padding: 15px;
         text-decoration: none;
-
         color: var(--red);
         font-size: 2.15em;
+        transition: color 0.3s ease, transform 0.25s ease, text-shadow 0.25s ease;
     }
+
+    a:hover {
+    color: var(--yellow);
+    transform: scale(1.08);
+    text-shadow: 0 0 8px rgba(245, 178, 1, 0.3);
+    }   
+
+
 
    /* Nav items */
     li {
@@ -80,6 +88,7 @@ body {
 
 /* CookModeToggle Switch */
 .cookmode-toggle {
+   position: relative;
     display: flex;
     align-items: center;
     gap: 0.5em;
@@ -88,6 +97,32 @@ body {
     font-family: "organda-mn", sans-serif;
     font-weight: 700;
     font-style: normal;
+    cursor: pointer;
+}
+
+/* Tooltip description */
+.cookmode-toggle::after {
+    content: "Prevents your screen from going dark!";
+    position: absolute;
+    bottom: -2.5em; /* positions below toggle */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--blue);
+    color: white;
+    padding: 0.35em 0.75em;
+    border-radius: 8px;
+    font-family: "marine", sans-serif;
+    font-size: 0.55em;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cookmode-toggle:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-4px);
 }
 
 /* Toggle switch styling */
@@ -230,7 +265,7 @@ main {
     gap: 1em;
     align-items: start;
     margin-bottom: 0.5em;
-    padding-top: 9em;
+    padding-top: 9.25em;
  
     h1 {
         font-family: "organda-mn", sans-serif;
@@ -284,6 +319,16 @@ main {
         padding-top: 1em;
     }
 
+#ingredients h3 {
+        font-family: "marine", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 16pt;
+        color: var(--blue);
+        margin-top: 0; 
+        margin-bottom: 1.25em;
+}
+
 .ingredientlist {
     display: grid;
     grid-template-columns: 2fr 2fr;
@@ -336,9 +381,19 @@ li::marker {
         font-size: 90pt;
         color: var(--red);
         margin: 0;
-        margin-bottom: 0.25em;
+        margin-bottom: 0.1em;
+    }
+    h3 {
+        font-family: "marine", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 16pt;
+        color: var(--blue);
+        margin-top: 0; 
+        margin-bottom: 1.75em;
     }
 }
+
 
 
 .step-images {
@@ -517,7 +572,17 @@ li::marker {
         font-size: 80pt;
         color: var(--red);
         margin: 0;
-        margin-bottom: 0.25em;
+        margin-bottom: 0.1em;
+    }
+
+    p {
+        font-family: "marine", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 16pt;
+        color: var(--blue);
+        margin-top: 0; 
+        margin-bottom: 1.5em;
     }
 
     .final-click {
@@ -531,9 +596,8 @@ li::marker {
     .final-images {
         display: flex;
         justify-content: center;
-        margin-bottom: 8em;
-        margin-top: 3em;
-        
+        margin-bottom: 7em;
+        margin-top: 6em;
         img:hover {
         cursor: url('../assets/drawing/fork2.png'), auto;
         }
@@ -564,5 +628,13 @@ footer a img {
     margin: 0 auto; /* centers the image */
     width: 80px;
     height: auto;
-    margin-bottom: 4em;
+    margin-bottom: 3.5em;
+}
+
+#logo {
+  transition: transform 0.3s ease;
+}
+
+#logo:hover {
+  transform: rotate(10deg);
 }
