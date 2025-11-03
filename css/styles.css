@@ -631,10 +631,10 @@ footer a img {
     margin-bottom: 3.5em;
 }
 
-#logo {
+#footer-logo {
   transition: transform 0.3s ease;
 }
 
-#logo:hover {
+#footer-logo:hover {
   transform: rotate(10deg);
 }
