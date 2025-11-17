@@ -13,6 +13,7 @@ html{
 body {
     background-color: var(--cream);
     margin: 7px;
+    cursor: url('../assets/drawing/pennecursor.png') 0 0, auto;
 }
 
 .navbar {
